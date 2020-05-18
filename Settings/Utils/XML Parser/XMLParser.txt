@@ -1,3 +1,0 @@
-<T> void exportToXML(T object, String path) throws JAXBException;
-
-    <T> T importFromXml(Class<T> klass, String path) throws JAXBException, FileNotFoundException;
