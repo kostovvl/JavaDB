@@ -1,0 +1,6 @@
+Gson gson() {
+        return new GsonBuilder()
+        .excludeFieldsWithoutExposeAnnotation()
+        .setPrettyPrinting()
+        .create();
+    }

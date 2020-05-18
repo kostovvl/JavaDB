@@ -1,0 +1,14 @@
+@Component
+public class FilesUtilImpl implements FilesUtil {
+    @Override
+    public String readFileContent(String filePath) throws IOException {
+        return Files.readAllLines(Paths.get(filePath)).stream()
+                .filter(r -> !r.isEmpty())
+                .collect(Collectors.joining(System.lineSeparator()));
+    }
+
+    @Override
+    public void write(String content, String filePath) throws IOException {
+        
+        Files.write(Paths.get(filePath), Collections.singleton(content), StandardCharsets.UTF_8);
+    }
